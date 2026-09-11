@@ -77,22 +77,22 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen w-full bg-white flex flex-col lg:flex-row relative overflow-x-hidden">
       
-      {/* ==================== LEFT BRANDING COLUMN (40%) ==================== */}
-      <div className="w-full lg:w-[40%] bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0b0f19] p-8 sm:p-12 lg:p-14 flex flex-col justify-between text-white relative overflow-hidden shrink-0">
+      {/* ==================== LEFT BRANDING COLUMN (60%) ==================== */}
+      <div className="w-full lg:w-[60%] bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0b0f19] p-8 sm:p-12 lg:p-16 flex flex-col justify-between text-white relative overflow-hidden shrink-0">
         
         {/* Ambient tech glow & pattern */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#4056d6]/20 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#4056d6]/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="absolute inset-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:24px_24px] opacity-30 pointer-events-none"></div>
 
         {/* Brand Logo Header & Hero Info */}
-        <div className="relative z-10">
+        <div className="relative z-10 max-w-2xl">
           <div className="flex items-center gap-3.5">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#4056d6] to-[#6b7cff] flex items-center justify-center shadow-lg shadow-indigo-500/30">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#4056d6] to-[#6b7cff] flex items-center justify-center shadow-lg shadow-indigo-500/30">
               <Layers className="w-6 h-6 text-white" />
             </div>
             <div>
-              <span className="text-2xl font-black tracking-tight text-white">Resource<span className="text-[#8492ff]">Hub</span></span>
+              <span className="text-2xl sm:text-3xl font-black tracking-tight text-white">Resource<span className="text-[#8492ff]">Hub</span></span>
               <span className="block text-[11px] font-semibold text-slate-400 tracking-wider uppercase">Enterprise Edition</span>
             </div>
           </div>
@@ -102,30 +102,30 @@ export default function LoginPage() {
               <Sparkles className="w-3.5 h-3.5" />
               <span>Version 3.0 • Production Spec</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
               Intelligent Workforce &amp; Project Resource Planning
             </h2>
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-lg">
+            <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
               Streamline staffing blueprints, cross-project bandwidth sharing, candidate matching, and enterprise utilization in real-time.
             </p>
           </div>
         </div>
 
         {/* Feature Highlights Card */}
-        <div className="my-8 lg:my-10 p-5 rounded-2xl bg-slate-800/60 border border-slate-700/60 backdrop-blur-md space-y-3.5 relative z-10">
-          <div className="flex items-start gap-3 text-xs sm:text-sm text-slate-200">
+        <div className="my-8 lg:my-10 p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 backdrop-blur-md space-y-3.5 relative z-10 max-w-2xl">
+          <div className="flex items-start gap-3 text-sm text-slate-200">
             <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
               <CheckCircle className="w-3.5 h-3.5" />
             </div>
             <span><strong className="text-white">Role-Based Access Control</strong> (Admin, Delivery Head, PM, HR)</span>
           </div>
-          <div className="flex items-start gap-3 text-xs sm:text-sm text-slate-200">
+          <div className="flex items-start gap-3 text-sm text-slate-200">
             <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
               <CheckCircle className="w-3.5 h-3.5" />
             </div>
             <span><strong className="text-white">Automated Gap Engine &amp; 100% Guard</strong> prevents over-allocation</span>
           </div>
-          <div className="flex items-start gap-3 text-xs sm:text-sm text-slate-200">
+          <div className="flex items-start gap-3 text-sm text-slate-200">
             <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
               <CheckCircle className="w-3.5 h-3.5" />
             </div>
@@ -134,7 +134,7 @@ export default function LoginPage() {
         </div>
 
         {/* Footer Trust Marker */}
-        <div className="pt-6 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 relative z-10">
+        <div className="pt-6 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 relative z-10 max-w-2xl">
           <span className="flex items-center gap-2 font-medium">
             <Shield className="w-4 h-4 text-emerald-400" />
             256-bit Encrypted
@@ -143,14 +143,14 @@ export default function LoginPage() {
         </div>
       </div>
 
-      {/* ==================== RIGHT LOGIN FORM COLUMN (60%) ==================== */}
-      <div className="w-full lg:w-[60%] min-h-screen bg-slate-50/60 flex flex-col justify-between p-8 sm:p-12 lg:p-16 relative">
+      {/* ==================== RIGHT LOGIN FORM COLUMN (40%) ==================== */}
+      <div className="w-full lg:w-[40%] min-h-screen bg-slate-50/60 flex flex-col justify-between p-8 sm:p-10 lg:p-12 relative">
         
         {/* Subtle decorative background pattern */}
         <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-50 pointer-events-none"></div>
 
         {/* Form Container */}
-        <div className="max-w-xl w-full mx-auto my-auto relative z-10 py-6">
+        <div className="max-w-md w-full mx-auto my-auto relative z-10 py-6">
           
           {/* Form Title */}
           <div className="mb-7">
@@ -269,7 +269,7 @@ export default function LoginPage() {
               <span className="text-[11px] text-slate-400 font-medium">Static Test Mode</span>
             </div>
             
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+            <div className="grid grid-cols-2 gap-2.5">
               {DEMO_ACCOUNTS.map((account) => {
                 const isSelected = email.toLowerCase() === account.email.toLowerCase();
                 return (
@@ -305,7 +305,7 @@ export default function LoginPage() {
         </div>
 
         {/* Bottom Help Text */}
-        <div className="pt-6 text-center text-xs text-slate-400 border-t border-slate-200/80 relative z-10 max-w-xl mx-auto w-full">
+        <div className="pt-6 text-center text-xs text-slate-400 border-t border-slate-200/80 relative z-10 max-w-md mx-auto w-full">
           Need assistance? Contact <a href="#" className="text-slate-600 hover:text-slate-900 font-medium underline">Enterprise IT Support</a> or view <a href="#" className="text-slate-600 hover:text-slate-900 font-medium underline">Security Policy</a>.
         </div>
 
