@@ -75,68 +75,68 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-white flex flex-col lg:flex-row relative overflow-x-hidden">
+    <div className="min-h-screen lg:h-screen w-full bg-white flex flex-col lg:flex-row relative overflow-x-hidden lg:overflow-hidden">
       
       {/* ==================== LEFT BRANDING COLUMN (60%) ==================== */}
-      <div className="w-full lg:w-[60%] bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0b0f19] p-8 sm:p-12 lg:p-16 flex flex-col justify-between text-white relative overflow-hidden shrink-0">
+      <div className="w-full lg:w-[60%] bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0b0f19] p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col justify-between text-white relative overflow-hidden shrink-0 h-full">
         
         {/* Ambient tech glow & pattern */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#4056d6]/20 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:24px_24px] opacity-30 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#4056d6]/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:24px_24px] opacity-25 pointer-events-none"></div>
 
         {/* Brand Logo Header & Hero Info */}
-        <div className="relative z-10 max-w-2xl">
-          <div className="flex items-center gap-3.5">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#4056d6] to-[#6b7cff] flex items-center justify-center shadow-lg shadow-indigo-500/30">
-              <Layers className="w-6 h-6 text-white" />
+        <div className="relative z-10 max-w-xl">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#4056d6] to-[#6b7cff] flex items-center justify-center shadow-md shadow-indigo-500/30">
+              <Layers className="w-5 h-5 text-white" />
             </div>
             <div>
-              <span className="text-2xl sm:text-3xl font-black tracking-tight text-white">Resource<span className="text-[#8492ff]">Hub</span></span>
-              <span className="block text-[11px] font-semibold text-slate-400 tracking-wider uppercase">Enterprise Edition</span>
+              <span className="text-xl sm:text-2xl font-black tracking-tight text-white">Resource<span className="text-[#8492ff]">Hub</span></span>
+              <span className="block text-[10px] font-semibold text-slate-400 tracking-wider uppercase">Enterprise Edition</span>
             </div>
           </div>
 
-          <div className="mt-12 lg:mt-16 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 border border-slate-700/80 text-[#8492ff] text-xs font-semibold shadow-sm">
+          <div className="mt-6 sm:mt-8 lg:mt-10 space-y-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/90 border border-slate-700/80 text-[#8492ff] text-xs font-semibold shadow-sm">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Version 3.0 • Production Spec</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-tight">
               Intelligent Workforce &amp; Project Resource Planning
             </h2>
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
+            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-lg">
               Streamline staffing blueprints, cross-project bandwidth sharing, candidate matching, and enterprise utilization in real-time.
             </p>
           </div>
         </div>
 
         {/* Feature Highlights Card */}
-        <div className="my-8 lg:my-10 p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 backdrop-blur-md space-y-3.5 relative z-10 max-w-2xl">
-          <div className="flex items-start gap-3 text-sm text-slate-200">
-            <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-              <CheckCircle className="w-3.5 h-3.5" />
+        <div className="my-5 lg:my-6 p-4 sm:p-5 rounded-2xl bg-slate-800/60 border border-slate-700/60 backdrop-blur-md space-y-2.5 relative z-10 max-w-xl">
+          <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">
+            <div className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+              <CheckCircle className="w-3 h-3" />
             </div>
             <span><strong className="text-white">Role-Based Access Control</strong> (Admin, Delivery Head, PM, HR)</span>
           </div>
-          <div className="flex items-start gap-3 text-sm text-slate-200">
-            <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-              <CheckCircle className="w-3.5 h-3.5" />
+          <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">
+            <div className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+              <CheckCircle className="w-3 h-3" />
             </div>
             <span><strong className="text-white">Automated Gap Engine &amp; 100% Guard</strong> prevents over-allocation</span>
           </div>
-          <div className="flex items-start gap-3 text-sm text-slate-200">
-            <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-              <CheckCircle className="w-3.5 h-3.5" />
+          <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">
+            <div className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+              <CheckCircle className="w-3 h-3" />
             </div>
             <span><strong className="text-white">Cross-Project Sharing</strong> with peer-to-peer approvals</span>
           </div>
         </div>
 
         {/* Footer Trust Marker */}
-        <div className="pt-6 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 relative z-10 max-w-2xl">
-          <span className="flex items-center gap-2 font-medium">
-            <Shield className="w-4 h-4 text-emerald-400" />
+        <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400 relative z-10 max-w-xl">
+          <span className="flex items-center gap-1.5 font-medium">
+            <Shield className="w-3.5 h-3.5 text-emerald-400" />
             256-bit Encrypted
           </span>
           <span className="font-medium">Single Sign-On (SSO) Ready</span>
@@ -144,36 +144,36 @@ export default function LoginPage() {
       </div>
 
       {/* ==================== RIGHT LOGIN FORM COLUMN (40%) ==================== */}
-      <div className="w-full lg:w-[40%] min-h-screen bg-slate-50/60 flex flex-col justify-between p-8 sm:p-10 lg:p-12 relative">
+      <div className="w-full lg:w-[40%] bg-slate-50/60 flex flex-col justify-between p-6 sm:p-8 lg:p-8 xl:p-10 relative h-full overflow-y-auto lg:overflow-y-auto">
         
         {/* Subtle decorative background pattern */}
         <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-50 pointer-events-none"></div>
 
-        {/* Form Container */}
-        <div className="max-w-md w-full mx-auto my-auto relative z-10 py-6">
+        {/* Form Container (compact and centered) */}
+        <div className="max-w-sm lg:max-w-md w-full mx-auto my-auto relative z-10 py-2">
           
           {/* Form Title */}
-          <div className="mb-7">
-            <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Corporate Sign In</h1>
-            <p className="text-slate-500 text-sm mt-1.5">
+          <div className="mb-4">
+            <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Corporate Sign In</h1>
+            <p className="text-slate-500 text-xs sm:text-sm mt-1">
               Access your assigned projects, team rosters, and resource operations.
             </p>
           </div>
 
           {/* Error Banner */}
           {error && (
-            <div className="mb-5 p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs flex items-start gap-3 animate-in fade-in duration-150">
+            <div className="mb-3.5 p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs flex items-start gap-2.5 animate-in fade-in duration-150">
               <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
               <span className="font-medium">{error}</span>
             </div>
           )}
 
           {/* Login Form */}
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-3.5">
             
             {/* Work Email */}
             <div>
-              <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+              <label className="block text-xs font-semibold text-slate-700 mb-1">
                 Corporate Email
               </label>
               <div className="relative">
@@ -185,7 +185,7 @@ export default function LoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="e.g. pm.rao@resourcehub.corp"
-                  className="w-full pl-10 pr-4 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#4056d6] focus:border-transparent transition-all shadow-sm"
+                  className="w-full pl-10 pr-4 py-2 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#4056d6] focus:border-transparent transition-all shadow-sm"
                   required
                 />
               </div>
@@ -193,7 +193,7 @@ export default function LoginPage() {
 
             {/* Password */}
             <div>
-              <div className="flex items-center justify-between mb-1.5">
+              <div className="flex items-center justify-between mb-1">
                 <label className="block text-xs font-semibold text-slate-700">
                   Password
                 </label>
@@ -214,7 +214,7 @@ export default function LoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter password"
-                  className="w-full pl-10 pr-10 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#4056d6] focus:border-transparent transition-all shadow-sm"
+                  className="w-full pl-10 pr-10 py-2 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#4056d6] focus:border-transparent transition-all shadow-sm"
                   required
                 />
                 <button
@@ -228,7 +228,7 @@ export default function LoginPage() {
             </div>
 
             {/* Remember Me */}
-            <div className="flex items-center justify-between pt-1">
+            <div className="flex items-center justify-between pt-0.5">
               <label className="flex items-center gap-2 cursor-pointer">
                 <input
                   type="checkbox"
@@ -244,7 +244,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 px-4 bg-[#4056d6] hover:bg-[#3245b5] text-white font-semibold text-sm rounded-xl shadow-md hover:shadow-indigo-500/20 transition-all flex items-center justify-center gap-2 disabled:opacity-60 cursor-pointer mt-2"
+              className="w-full py-2.5 px-4 bg-[#4056d6] hover:bg-[#3245b5] text-white font-semibold text-sm rounded-xl shadow-sm hover:shadow-indigo-500/20 transition-all flex items-center justify-center gap-2 disabled:opacity-60 cursor-pointer mt-1"
             >
               {loading ? (
                 <>
@@ -260,16 +260,16 @@ export default function LoginPage() {
             </button>
           </form>
 
-          {/* Quick-Fill Demo Roles Toolbar (For Smooth Testing) */}
-          <div className="mt-8 pt-6 border-t border-slate-200/80">
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-                Quick-Fill Demo Roles (Click to Autofill):
+          {/* Quick-Fill Demo Roles Toolbar */}
+          <div className="mt-5 pt-4 border-t border-slate-200/80">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+                Quick-Fill Demo Roles:
               </span>
-              <span className="text-[11px] text-slate-400 font-medium">Static Test Mode</span>
+              <span className="text-[10px] text-slate-400 font-medium">Static Test Mode</span>
             </div>
             
-            <div className="grid grid-cols-2 gap-2.5">
+            <div className="grid grid-cols-2 gap-2">
               {DEMO_ACCOUNTS.map((account) => {
                 const isSelected = email.toLowerCase() === account.email.toLowerCase();
                 return (
@@ -277,7 +277,7 @@ export default function LoginPage() {
                     key={account.id}
                     type="button"
                     onClick={() => handleQuickFill(account)}
-                    className={`p-2.5 rounded-xl text-left border transition-all cursor-pointer shadow-sm ${
+                    className={`p-2 rounded-xl text-left border transition-all cursor-pointer shadow-xs ${
                       isSelected
                         ? 'bg-indigo-50 border-[#4056d6] ring-1 ring-[#4056d6]'
                         : 'bg-white hover:bg-slate-50 border-slate-200 hover:border-slate-300'
@@ -293,7 +293,7 @@ export default function LoginPage() {
                         {account.role}
                       </span>
                     </div>
-                    <span className="text-[11px] text-slate-500 block truncate mt-0.5 font-medium">
+                    <span className="text-[10px] text-slate-500 block truncate mt-0.5 font-medium">
                       {account.name.split(' ')[0]}
                     </span>
                   </button>
@@ -305,7 +305,7 @@ export default function LoginPage() {
         </div>
 
         {/* Bottom Help Text */}
-        <div className="pt-6 text-center text-xs text-slate-400 border-t border-slate-200/80 relative z-10 max-w-md mx-auto w-full">
+        <div className="pt-3 text-center text-[11px] text-slate-400 border-t border-slate-200/80 relative z-10 max-w-sm lg:max-w-md mx-auto w-full shrink-0">
           Need assistance? Contact <a href="#" className="text-slate-600 hover:text-slate-900 font-medium underline">Enterprise IT Support</a> or view <a href="#" className="text-slate-600 hover:text-slate-900 font-medium underline">Security Policy</a>.
         </div>
 
