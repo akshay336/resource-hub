@@ -75,240 +75,246 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen lg:h-screen w-full bg-white flex flex-col lg:flex-row relative overflow-x-hidden lg:overflow-hidden">
+    <div className="min-h-screen bg-[#f8fafc] flex flex-col justify-center relative overflow-hidden">
       
-      {/* ==================== LEFT BRANDING COLUMN (60%) ==================== */}
-      <div className="w-full lg:w-[60%] bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0b0f19] p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col justify-between text-white relative overflow-hidden shrink-0 h-full">
-        
-        {/* Ambient tech glow & pattern */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#4056d6]/20 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:24px_24px] opacity-25 pointer-events-none"></div>
+      {/* Subtle Background Pattern & Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-60"></div>
+      <div className="absolute -top-40 -left-40 w-96 h-96 bg-indigo-100 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+      <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
 
-        {/* Brand Logo Header & Hero Info */}
-        <div className="relative z-10 max-w-xl">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#4056d6] to-[#6b7cff] flex items-center justify-center shadow-md shadow-indigo-500/30">
-              <Layers className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <span className="text-xl sm:text-2xl font-black tracking-tight text-white">Resource<span className="text-[#8492ff]">Hub</span></span>
-              <span className="block text-[10px] font-semibold text-slate-400 tracking-wider uppercase">Enterprise Edition</span>
-            </div>
-          </div>
-
-          <div className="mt-6 sm:mt-8 lg:mt-10 space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/90 border border-slate-700/80 text-[#8492ff] text-xs font-semibold shadow-sm">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Version 3.0 • Production Spec</span>
-            </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-tight">
-              Intelligent Workforce &amp; Project Resource Planning
-            </h2>
-            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-lg">
-              Streamline staffing blueprints, cross-project bandwidth sharing, candidate matching, and enterprise utilization in real-time.
-            </p>
-          </div>
-        </div>
-
-        {/* Feature Highlights Card */}
-        <div className="my-5 lg:my-6 p-4 sm:p-5 rounded-2xl bg-slate-800/60 border border-slate-700/60 backdrop-blur-md space-y-2.5 relative z-10 max-w-xl">
-          <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">
-            <div className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-              <CheckCircle className="w-3 h-3" />
-            </div>
-            <span><strong className="text-white">Role-Based Access Control</strong> (Admin, Delivery Head, PM, HR)</span>
-          </div>
-          <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">
-            <div className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-              <CheckCircle className="w-3 h-3" />
-            </div>
-            <span><strong className="text-white">Automated Gap Engine &amp; 100% Guard</strong> prevents over-allocation</span>
-          </div>
-          <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">
-            <div className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-              <CheckCircle className="w-3 h-3" />
-            </div>
-            <span><strong className="text-white">Cross-Project Sharing</strong> with peer-to-peer approvals</span>
-          </div>
-        </div>
-
-        {/* Footer Trust Marker */}
-        <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400 relative z-10 max-w-xl">
-          <span className="flex items-center gap-1.5 font-medium">
-            <Shield className="w-3.5 h-3.5 text-emerald-400" />
-            256-bit Encrypted
-          </span>
-          <span className="font-medium">Single Sign-On (SSO) Ready</span>
-        </div>
-      </div>
-
-      {/* ==================== RIGHT LOGIN FORM COLUMN (40%) ==================== */}
-      <div className="w-full lg:w-[40%] bg-slate-50/60 flex flex-col justify-between p-6 sm:p-8 lg:p-8 xl:p-10 relative h-full overflow-y-auto lg:overflow-y-auto">
-        
-        {/* Subtle decorative background pattern */}
-        <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-50 pointer-events-none"></div>
-
-        {/* Form Container (compact and centered) */}
-        <div className="max-w-sm lg:max-w-md w-full mx-auto my-auto relative z-10 py-2">
+      {/* Main Container */}
+      <div className="relative z-10 max-w-5xl w-full mx-auto p-4 sm:p-6 lg:p-8">
+        <div className="bg-white rounded-3xl shadow-card border border-slate-200/80 overflow-hidden grid grid-cols-1 lg:grid-cols-12 min-h-[640px]">
           
-          {/* Form Title */}
-          <div className="mb-4">
-            <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Corporate Sign In</h1>
-            <p className="text-slate-500 text-xs sm:text-sm mt-1">
-              Access your assigned projects, team rosters, and resource operations.
-            </p>
-          </div>
-
-          {/* Error Banner */}
-          {error && (
-            <div className="mb-3.5 p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs flex items-start gap-2.5 animate-in fade-in duration-150">
-              <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
-              <span className="font-medium">{error}</span>
-            </div>
-          )}
-
-          {/* Login Form */}
-          <form onSubmit={handleSubmit} className="space-y-3.5">
+          {/* ==================== LEFT BRANDING COLUMN ==================== */}
+          <div className="lg:col-span-5 bg-gradient-to-br from-[#111827] via-[#1e293b] to-[#0f172a] p-8 sm:p-10 flex flex-col justify-between text-white relative">
             
-            {/* Work Email */}
+            {/* Ambient inner glow */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#4056d6]/20 rounded-full blur-2xl pointer-events-none"></div>
+
+            {/* Brand Logo Header */}
             <div>
-              <label className="block text-xs font-semibold text-slate-700 mb-1">
-                Corporate Email
-              </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                  <Mail className="w-4 h-4" />
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#4056d6] to-[#6b7cff] flex items-center justify-center shadow-lg shadow-indigo-500/30">
+                  <Layers className="w-5 h-5 text-white" />
                 </div>
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="e.g. pm.rao@resourcehub.corp"
-                  className="w-full pl-10 pr-4 py-2 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#4056d6] focus:border-transparent transition-all shadow-sm"
-                  required
-                />
-              </div>
-            </div>
-
-            {/* Password */}
-            <div>
-              <div className="flex items-center justify-between mb-1">
-                <label className="block text-xs font-semibold text-slate-700">
-                  Password
-                </label>
-                <button
-                  type="button"
-                  onClick={() => setShowForgotModal(true)}
-                  className="text-xs font-medium text-[#4056d6] hover:text-[#3245b5] hover:underline cursor-pointer"
-                >
-                  Forgot password?
-                </button>
-              </div>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                  <Lock className="w-4 h-4" />
+                <div>
+                  <span className="text-xl font-black tracking-tight text-white">Resource<span className="text-[#8492ff]">Hub</span></span>
+                  <span className="block text-[10px] font-semibold text-slate-400 tracking-wider uppercase">Enterprise Edition</span>
                 </div>
-                <input
-                  type={showPassword ? 'text' : 'password'}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter password"
-                  className="w-full pl-10 pr-10 py-2 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#4056d6] focus:border-transparent transition-all shadow-sm"
-                  required
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-600 cursor-pointer"
-                >
-                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-                </button>
+              </div>
+
+              <div className="mt-12 space-y-3">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700 text-[#8492ff] text-xs font-semibold">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>Version 3.0 • Production Spec</span>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-tight">
+                  Intelligent Workforce &amp; Project Resource Planning
+                </h2>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Streamline staffing blueprints, cross-project bandwidth sharing, candidate matching, and enterprise utilization in real-time.
+                </p>
               </div>
             </div>
 
-            {/* Remember Me */}
-            <div className="flex items-center justify-between pt-0.5">
-              <label className="flex items-center gap-2 cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={rememberMe}
-                  onChange={(e) => setRememberMe(e.target.checked)}
-                  className="w-4 h-4 text-[#4056d6] rounded border-slate-300 focus:ring-[#4056d6] cursor-pointer"
-                />
-                <span className="text-xs text-slate-600 font-medium">Remember my work email</span>
-              </label>
+            {/* Feature Highlights Card */}
+            <div className="my-8 p-4 rounded-2xl bg-slate-800/60 border border-slate-700/60 backdrop-blur-sm space-y-3">
+              <div className="flex items-start gap-3 text-xs text-slate-300">
+                <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <CheckCircle className="w-3.5 h-3.5" />
+                </div>
+                <span><strong>Role-Based Access Control</strong> (Admin, Delivery Head, PM, HR)</span>
+              </div>
+              <div className="flex items-start gap-3 text-xs text-slate-300">
+                <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <CheckCircle className="w-3.5 h-3.5" />
+                </div>
+                <span><strong>Automated Gap Engine &amp; 100% Guard</strong> prevents over-allocation</span>
+              </div>
+              <div className="flex items-start gap-3 text-xs text-slate-300">
+                <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <CheckCircle className="w-3.5 h-3.5" />
+                </div>
+                <span><strong>Cross-Project Sharing</strong> with peer-to-peer approvals</span>
+              </div>
             </div>
 
-            {/* Submit Button */}
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full py-2.5 px-4 bg-[#4056d6] hover:bg-[#3245b5] text-white font-semibold text-sm rounded-xl shadow-sm hover:shadow-indigo-500/20 transition-all flex items-center justify-center gap-2 disabled:opacity-60 cursor-pointer mt-1"
-            >
-              {loading ? (
-                <>
-                  <Loader2 className="w-4 h-4 animate-spin" />
-                  Authenticating...
-                </>
-              ) : (
-                <>
-                  Sign In to Workspace
-                  <ArrowRight className="w-4 h-4" />
-                </>
-              )}
-            </button>
-          </form>
-
-          {/* Quick-Fill Demo Roles Toolbar */}
-          <div className="mt-5 pt-4 border-t border-slate-200/80">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-                Quick-Fill Demo Roles:
+            {/* Footer Trust Marker */}
+            <div className="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+              <span className="flex items-center gap-1.5">
+                <Shield className="w-3.5 h-3.5 text-emerald-400" />
+                256-bit Encrypted
               </span>
-              <span className="text-[10px] text-slate-400 font-medium">Static Test Mode</span>
-            </div>
-            
-            <div className="grid grid-cols-2 gap-2">
-              {DEMO_ACCOUNTS.map((account) => {
-                const isSelected = email.toLowerCase() === account.email.toLowerCase();
-                return (
-                  <button
-                    key={account.id}
-                    type="button"
-                    onClick={() => handleQuickFill(account)}
-                    className={`p-2 rounded-xl text-left border transition-all cursor-pointer shadow-xs ${
-                      isSelected
-                        ? 'bg-indigo-50 border-[#4056d6] ring-1 ring-[#4056d6]'
-                        : 'bg-white hover:bg-slate-50 border-slate-200 hover:border-slate-300'
-                    }`}
-                  >
-                    <div className="flex items-center gap-1.5">
-                      <span className={`w-2 h-2 rounded-full ${
-                        account.role === 'System Admin' ? 'bg-indigo-500' :
-                        account.role === 'Delivery Head' ? 'bg-blue-500' :
-                        account.role === 'Project Manager' ? 'bg-emerald-500' : 'bg-purple-500'
-                      }`} />
-                      <span className="text-xs font-bold text-slate-800 truncate block">
-                        {account.role}
-                      </span>
-                    </div>
-                    <span className="text-[10px] text-slate-500 block truncate mt-0.5 font-medium">
-                      {account.name.split(' ')[0]}
-                    </span>
-                  </button>
-                );
-              })}
+              <span>Single Sign-On (SSO) Ready</span>
             </div>
           </div>
 
-        </div>
 
-        {/* Bottom Help Text */}
-        <div className="pt-3 text-center text-[11px] text-slate-400 border-t border-slate-200/80 relative z-10 max-w-sm lg:max-w-md mx-auto w-full shrink-0">
-          Need assistance? Contact <a href="#" className="text-slate-600 hover:text-slate-900 font-medium underline">Enterprise IT Support</a> or view <a href="#" className="text-slate-600 hover:text-slate-900 font-medium underline">Security Policy</a>.
-        </div>
+          {/* ==================== RIGHT LOGIN FORM COLUMN ==================== */}
+          <div className="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-between bg-white">
+            
+            <div>
+              {/* Form Title */}
+              <div className="mb-6">
+                <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Corporate Sign In</h1>
+                <p className="text-slate-500 text-sm mt-1">
+                  Access your assigned projects, team rosters, and resource operations.
+                </p>
+              </div>
 
+              {/* Error Banner */}
+              {error && (
+                <div className="mb-5 p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs flex items-start gap-3 animate-in fade-in duration-150">
+                  <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                  <span className="font-medium">{error}</span>
+                </div>
+              )}
+
+              {/* Login Form */}
+              <form onSubmit={handleSubmit} className="space-y-4">
+                
+                {/* Work Email */}
+                <div>
+                  <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                    Corporate Email
+                  </label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                      <Mail className="w-4 h-4" />
+                    </div>
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="e.g. pm.rao@resourcehub.corp"
+                      className="w-full pl-10 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4056d6] focus:border-transparent transition-all"
+                      required
+                    />
+                  </div>
+                </div>
+
+                {/* Password */}
+                <div>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <label className="block text-xs font-semibold text-slate-700">
+                      Password
+                    </label>
+                    <button
+                      type="button"
+                      onClick={() => setShowForgotModal(true)}
+                      className="text-xs font-medium text-[#4056d6] hover:text-[#3245b5] hover:underline"
+                    >
+                      Forgot password?
+                    </button>
+                  </div>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                      <Lock className="w-4 h-4" />
+                    </div>
+                    <input
+                      type={showPassword ? 'text' : 'password'}
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      placeholder="Enter password"
+                      className="w-full pl-10 pr-10 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4056d6] focus:border-transparent transition-all"
+                      required
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword(!showPassword)}
+                      className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-600"
+                    >
+                      {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                    </button>
+                  </div>
+                </div>
+
+                {/* Remember Me */}
+                <div className="flex items-center justify-between pt-1">
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={rememberMe}
+                      onChange={(e) => setRememberMe(e.target.checked)}
+                      className="w-4 h-4 text-[#4056d6] rounded border-slate-300 focus:ring-[#4056d6]"
+                    />
+                    <span className="text-xs text-slate-600 font-medium">Remember my work email</span>
+                  </label>
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full py-3 px-4 bg-[#4056d6] hover:bg-[#3245b5] text-white font-semibold text-sm rounded-xl shadow-md hover:shadow-indigo-500/20 transition-all flex items-center justify-center gap-2 disabled:opacity-60 cursor-pointer mt-2"
+                >
+                  {loading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Authenticating...
+                    </>
+                  ) : (
+                    <>
+                      Sign In to Workspace
+                      <ArrowRight className="w-4 h-4" />
+                    </>
+                  )}
+                </button>
+              </form>
+
+              {/* Quick-Fill Demo Roles Toolbar (For Smooth Testing) */}
+              <div className="mt-8 pt-6 border-t border-slate-100">
+                <div className="flex items-center justify-between mb-2.5">
+                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                    Quick-Fill Demo Roles (Click to Autofill):
+                  </span>
+                  <span className="text-[11px] text-slate-400 font-medium">Static Test Mode</span>
+                </div>
+                
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                  {DEMO_ACCOUNTS.map((account) => {
+                    const isSelected = email.toLowerCase() === account.email.toLowerCase();
+                    return (
+                      <button
+                        key={account.id}
+                        type="button"
+                        onClick={() => handleQuickFill(account)}
+                        className={`p-2 rounded-xl text-left border transition-all cursor-pointer ${
+                          isSelected
+                            ? 'bg-indigo-50 border-[#4056d6] ring-1 ring-[#4056d6]'
+                            : 'bg-slate-50 hover:bg-slate-100 border-slate-200'
+                        }`}
+                      >
+                        <div className="flex items-center gap-1.5">
+                          <span className={`w-2 h-2 rounded-full ${
+                            account.role === 'System Admin' ? 'bg-indigo-500' :
+                            account.role === 'Delivery Head' ? 'bg-blue-500' :
+                            account.role === 'Project Manager' ? 'bg-emerald-500' : 'bg-purple-500'
+                          }`} />
+                          <span className="text-xs font-bold text-slate-800 truncate block">
+                            {account.role}
+                          </span>
+                        </div>
+                        <span className="text-[11px] text-slate-500 block truncate mt-0.5">
+                          {account.name.split(' ')[0]}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+            </div>
+
+            {/* Bottom Help Text */}
+            <div className="mt-8 pt-4 text-center text-xs text-slate-400 border-t border-slate-100">
+              Need assistance? Contact <a href="#" className="text-slate-600 hover:text-slate-900 font-medium underline">Enterprise IT Support</a> or view <a href="#" className="text-slate-600 hover:text-slate-900 font-medium underline">Security Policy</a>.
+            </div>
+
+          </div>
+
+        </div>
       </div>
 
       {/* Floating Toast Notification */}

@@ -4,7 +4,7 @@ import {
   FolderKanban, Grid3X3, UsersRound, FileText, CalendarDays, 
   Hourglass, CalendarClock, PieChart, Gauge, FileBarChart, 
   Bell, Sliders, ShieldCheck, UserPlus, ArrowLeftRight,
-  ChevronLeft, ChevronRight, LogOut, Layers, Shield
+  ChevronLeft, ChevronRight, LogOut, Layers, Shield, Clock
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
@@ -29,7 +29,8 @@ const iconMap = {
   Sliders,
   ShieldCheck,
   UserPlus,
-  ArrowLeftRight
+  ArrowLeftRight,
+  Clock
 };
 
 export default function Sidebar({ currentView, onNavigate, isCollapsed, onToggleCollapse }) {

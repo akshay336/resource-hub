@@ -1,6 +1,6 @@
-﻿import React, { useState, useRef, useEffect } from 'react';
-import {
-  Bell, Search, ChevronDown, User, Shield, Key,
+import React, { useState, useRef, useEffect } from 'react';
+import { 
+  Bell, Search, ChevronDown, User, Shield, Key, 
   LogOut, CheckCircle2, AlertTriangle, Layers, ExternalLink
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
@@ -46,7 +46,7 @@ export default function Navbar({ currentView, onNavigate }) {
 
   return (
     <header className="h-16 bg-white border-b border-slate-200/80 px-6 flex items-center justify-between sticky top-0 z-30 shadow-xs">
-
+      
       {/* Left: Dynamic Breadcrumb */}
       <div className="flex items-center gap-2 text-sm">
         <span className="text-slate-400 font-medium hover:text-slate-600 cursor-pointer" onClick={() => onNavigate('Dashboard')}>
@@ -60,6 +60,16 @@ export default function Navbar({ currentView, onNavigate }) {
 
       {/* Right Controls */}
       <div className="flex items-center gap-3">
+        
+        {/* Global Search Bar (Quick filter helper) */}
+        <div className="relative hidden md:block">
+          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+          <input
+            type="text"
+            placeholder="Search projects, skills, team..."
+            className="w-64 pl-9 pr-4 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4056d6] focus:border-transparent transition-all"
+          />
+        </div>
 
         {/* Role Pill Indicator */}
         <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-[#4056d6] text-xs font-semibold">
@@ -81,7 +91,7 @@ export default function Navbar({ currentView, onNavigate }) {
           </button>
 
           {showNotifications && (
-            <div className="absolute right-0 mt-2 w-[380px] sm:w-[420px] bg-white rounded-2xl shadow-modal border border-slate-100 overflow-hidden animate-in fade-in duration-150 z-50">
+            <div className="absolute right-0 mt-2 w-84 bg-white rounded-2xl shadow-modal border border-slate-100 overflow-hidden animate-in fade-in duration-150 z-50">
               <div className="px-4 py-3 border-b border-slate-100 flex items-center justify-between bg-slate-50/70">
                 <div className="flex items-center gap-2">
                   <span className="font-bold text-slate-900 text-xs">Notifications</span>
@@ -102,8 +112,8 @@ export default function Navbar({ currentView, onNavigate }) {
               </div>
               <div className="divide-y divide-slate-100 max-h-72 overflow-y-auto">
                 {notifications.map((n) => (
-                  <div
-                    key={n.id}
+                  <div 
+                    key={n.id} 
                     onClick={() => {
                       handleMarkItemRead(n.id);
                       if (n.targetView) {
@@ -111,12 +121,13 @@ export default function Navbar({ currentView, onNavigate }) {
                         onNavigate(n.targetView);
                       }
                     }}
-                    className={`p-3.5 text-xs hover:bg-slate-50 transition-colors cursor-pointer ${n.unread ? 'bg-indigo-50/30 border-l-2 border-l-[#4056d6]' : ''
-                      }`}
+                    className={`p-3.5 text-xs hover:bg-slate-50 transition-colors cursor-pointer ${
+                      n.unread ? 'bg-indigo-50/30 border-l-2 border-l-[#4056d6]' : ''
+                    }`}
                   >
-                    <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center justify-between">
                       <strong className="text-slate-900 font-bold text-xs">{n.title}</strong>
-                      <span className="text-[10px] text-slate-400 font-mono whitespace-nowrap shrink-0">{n.time}</span>
+                      <span className="text-[10px] text-slate-400 font-mono">{n.time}</span>
                     </div>
                     <p className="text-slate-600 text-[11px] mt-0.5 leading-snug">{n.desc}</p>
                   </div>
@@ -127,7 +138,7 @@ export default function Navbar({ currentView, onNavigate }) {
                   onClick={() => { setShowNotifications(false); onNavigate('Notifications'); }}
                   className="text-xs font-bold text-[#4056d6] hover:underline cursor-pointer block w-full text-center"
                 >
-                  View Full Notification Center &rarr;
+                  View Full Notification Center →
                 </button>
               </div>
             </div>
@@ -156,7 +167,7 @@ export default function Navbar({ currentView, onNavigate }) {
 
           {showUserMenu && (
             <div className="absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-modal border border-slate-100 overflow-hidden animate-in fade-in duration-150 z-50">
-
+              
               {/* User Header Summary */}
               <div className="p-4 border-b border-slate-100 bg-slate-50/50">
                 <div className="flex items-center gap-3">
@@ -194,8 +205,9 @@ export default function Navbar({ currentView, onNavigate }) {
                     <button
                       key={acc.id}
                       onClick={() => { switchRole(acc.role); setShowUserMenu(false); }}
-                      className={`w-full flex items-center justify-between px-3 py-1.5 rounded-lg text-[11px] transition-colors cursor-pointer ${acc.role === currentUser.role ? 'bg-indigo-50 text-[#4056d6] font-bold' : 'text-slate-600 hover:bg-slate-100'
-                        }`}
+                      className={`w-full flex items-center justify-between px-3 py-1.5 rounded-lg text-[11px] transition-colors cursor-pointer ${
+                        acc.role === currentUser.role ? 'bg-indigo-50 text-[#4056d6] font-bold' : 'text-slate-600 hover:bg-slate-100'
+                      }`}
                     >
                       <span>{acc.role}</span>
                       {acc.role === currentUser.role && <CheckCircle2 className="w-3 h-3 text-[#4056d6]" />}

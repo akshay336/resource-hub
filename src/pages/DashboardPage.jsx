@@ -209,7 +209,7 @@ export default function DashboardPage({ onNavigate }) {
   const offset4 = -(seg1 + seg2 + seg3);
 
   return (
-    <div className="space-y-6 animate-in fade-in duration-200 ">
+    <div className="space-y-6 animate-in fade-in duration-200">
 
       {/* Toast Notification */}
       {toastMessage && (

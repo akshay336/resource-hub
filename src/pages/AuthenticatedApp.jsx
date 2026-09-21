@@ -23,6 +23,7 @@ import ReportsPage from './ReportsPage';
 import AuditLogsPage from './AuditLogsPage';
 import NotificationsPage from './NotificationsPage';
 import AdministrationPage from './AdministrationPage';
+import TimesheetPage from './TimesheetPage';
 import ErrorBoundary from '../components/common/ErrorBoundary';
 import PlaceholderView from './PlaceholderView';
 
@@ -109,6 +110,9 @@ export default function AuthenticatedApp() {
         );
       case 'Resource Allocation':
         return <ProjectTeamsPage />;
+      case 'Timesheets':
+      case 'Timesheet':
+        return <TimesheetPage />;
       case 'Bench Resources':
         return (
           <BenchResourcesPage 
