@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { 
-  Bell, Search, ChevronDown, User, Shield, Key, 
+  Bell, ChevronDown, User, Shield, Key, 
   LogOut, CheckCircle2, AlertTriangle, Layers, ExternalLink
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
@@ -60,16 +60,6 @@ export default function Navbar({ currentView, onNavigate }) {
 
       {/* Right Controls */}
       <div className="flex items-center gap-3">
-        
-        {/* Global Search Bar (Quick filter helper) */}
-        <div className="relative hidden md:block">
-          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
-          <input
-            type="text"
-            placeholder="Search projects, skills, team..."
-            className="w-64 pl-9 pr-4 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4056d6] focus:border-transparent transition-all"
-          />
-        </div>
 
         {/* Role Pill Indicator */}
         <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-[#4056d6] text-xs font-semibold">
@@ -91,7 +81,7 @@ export default function Navbar({ currentView, onNavigate }) {
           </button>
 
           {showNotifications && (
-            <div className="absolute right-0 mt-2 w-84 bg-white rounded-2xl shadow-modal border border-slate-100 overflow-hidden animate-in fade-in duration-150 z-50">
+            <div className="absolute right-0 mt-2 w-80 sm:w-[420px] bg-white rounded-2xl shadow-modal border border-slate-100 overflow-hidden animate-in fade-in duration-150 z-50">
               <div className="px-4 py-3 border-b border-slate-100 flex items-center justify-between bg-slate-50/70">
                 <div className="flex items-center gap-2">
                   <span className="font-bold text-slate-900 text-xs">Notifications</span>
@@ -110,7 +100,7 @@ export default function Navbar({ currentView, onNavigate }) {
                   </button>
                 )}
               </div>
-              <div className="divide-y divide-slate-100 max-h-72 overflow-y-auto">
+              <div className="divide-y divide-slate-100 max-h-80 overflow-y-auto">
                 {notifications.map((n) => (
                   <div 
                     key={n.id} 
@@ -125,9 +115,9 @@ export default function Navbar({ currentView, onNavigate }) {
                       n.unread ? 'bg-indigo-50/30 border-l-2 border-l-[#4056d6]' : ''
                     }`}
                   >
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between gap-2">
                       <strong className="text-slate-900 font-bold text-xs">{n.title}</strong>
-                      <span className="text-[10px] text-slate-400 font-mono">{n.time}</span>
+                      <span className="text-[10px] text-slate-400 font-mono shrink-0 whitespace-nowrap">{n.time}</span>
                     </div>
                     <p className="text-slate-600 text-[11px] mt-0.5 leading-snug">{n.desc}</p>
                   </div>
